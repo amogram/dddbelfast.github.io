@@ -1,0 +1,14 @@
+{% assign past_events = site.posts | where_exp:"post","post.upcoming != true"  %}
+{% assign past_event_count = past_events | size %}
+
+{% if past_event_count > 0 %}
+  <section id="past">
+    <h2>Previous Events</h2>
+
+    <div class="events">
+      {% for event in past_events limit:2 %}
+          {% include event.html %}
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}

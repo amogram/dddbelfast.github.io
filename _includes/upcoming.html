@@ -1,0 +1,14 @@
+{% assign future_events = site.posts | where:"upcoming",true | sort: 'date' asc  %}
+{% assign future_event_count = future_events | size %}
+
+{% if future_event_count > 0 %}
+  <section id="upcoming">
+    <h2>Upcoming Events</h2>
+
+    <div class="events">
+      {% for event in future_events limit:3 %}
+          {% include event.html %}
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
