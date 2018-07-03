@@ -36,9 +36,30 @@ body {
 }
 
 main {
+  > nav {
+    padding: 30px 0;
+    text-align: right;
+    
+    a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: $brand-color;
+      transition: color 0.25s ease;
+      font-size: 150%;
+
+      &:visited {
+        color: $brand-color;
+      }
+    
+      &:hover {
+        color: lighten($brand-color, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+
   > header{
     text-align: center;
-    padding-top: 100px;
 
     h1 {
       font-size: 250%;
