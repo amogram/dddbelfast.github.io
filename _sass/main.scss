@@ -25,7 +25,7 @@ $page-gutter: 5%;
           box-shadow: $shadow;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
-html, body, main {
+html, body {
   height: 100%;
   background: $background-color;
   color: $dark-text-color;
@@ -33,9 +33,13 @@ html, body, main {
 
 body {
   margin: 0 10%;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
+  flex: 1;
+
   > nav {
     padding: 30px 0;
     text-align: right;
@@ -98,3 +102,4 @@ main {
 
 @import 'event';
 @import 'events';
+@import 'footer';

@@ -1,0 +1,22 @@
+body {
+  > footer {
+    $text-color: darken($background-color, 20%);
+
+    padding: 10px 0;
+    text-align: right;
+    color: $text-color;
+
+    a {
+      text-decoration: underline;
+      color: $text-color;
+
+      &:visited, &:hover {
+        color: $text-color;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
